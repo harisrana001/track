@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trace — Unravel the Puzzle</title>
+  <meta name="description" content="Trace is a cozy, offline-first cat &amp; yarn path puzzle game with 364 handcrafted levels, Daily Trace challenges, and zero forced ads." />
+  <meta name="theme-color" content="#D97757" />
+  <link rel="icon" type="image/png" href="assets/app_icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a class="brand-link" href="index.html" aria-label="Trace home">
+        <img class="brand-icon" src="assets/app_icon.png" alt="Trace app icon" />
+        <span class="brand-wordmark">Trace</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a class="hide-mobile" href="#features">Features</a>
+        <a class="hide-mobile" href="#worlds">Worlds</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a class="btn btn-primary btn-sm" href="https://play.google.com/store/apps/details?id=com.cat.trace" target="_blank" rel="noopener">Get Trace</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="hero-badge">🐾 Cozy Path Puzzle &bull; 100% Offline</div>
+          <h1 class="hero-title">Trace</h1>
+          <p class="hero-tagline">unravel the puzzle</p>
+          <p class="hero-desc">
+            Draw one continuous strand of yarn across every open tile without crossing obstacles or retracing your steps. Relaxing to learn, deeply satisfying to master.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.cat.trace" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.61 1.814L13.793 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.382.218-.72.61-.92zm11.24 11.24l2.775 2.775-11.29 6.453 8.515-9.228zm3.78-1.56l2.48 1.418c.78.445.78 1.56 0 2.005l-2.48 1.418-3.076-3.075 3.076-1.766zM6.335 1.718l11.29 6.453-2.775 2.775-8.515-9.228z"/></svg>
+              Download on Google Play
+            </a>
+            <a class="btn btn-secondary" href="#how-to-play">How to Play</a>
+          </div>
+          <div class="hero-pills">
+            <span class="pill">🧶 364 Handcrafted Levels</span>
+            <span class="pill">✈️ Plays Anywhere Offline</span>
+            <span class="pill">✨ No Banner or Forced Ads</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="phone-frame" aria-label="Interactive Trace mini puzzle demo">
+            <div class="phone-notch"></div>
+            <div class="phone-header">
+              <span class="phone-level">Try a mini puzzle</span>
+              <span class="phone-world">Living room</span>
+            </div>
+            <div class="mini-board-wrap" id="mini-board-wrap">
+              <div class="mini-board" id="mini-board" role="grid" aria-label="4 by 4 mini trace grid"></div>
+              <svg class="mini-svg" id="mini-svg" viewBox="0 0 220 220" aria-hidden="true">
+                <path id="mini-yarn-path" fill="none" stroke="#D97757" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="phone-caption">
+              <span id="mini-status">Drag or tap adjacent tiles!</span>
+              <button type="button" class="phone-reset" id="mini-reset">Reset</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how-to-play">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">Simple Rules, Clever Puzzles</div>
+          <h2 class="section-title">One unbroken line. Every single tile.</h2>
+          <p class="section-subtitle">No timers unless you want one, no move penalties, and smooth drag-to-backtrack controls.</p>
+        </div>
+        <div class="card-grid-3">
+          <article class="card">
+            <div class="card-icon">🧶</div>
+            <h3>1. Unroll the Yarn</h3>
+            <p>Start from the highlighted cat tile and glide up, down, left, or right to connect neighboring open tiles in one continuous path.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🛋️</div>
+            <h3>2. Weave Around Obstacles</h3>
+            <p>Avoid cozy room obstacles and dead ends. Changed your mind? Drag backward along your strand to undo smoothly—zero friction.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">⭐</div>
+            <h3>3. Collect Stars &amp; Unlock</h3>
+            <p>Fill every open cell to win up to 3 stars, build daily streaks, and unlock the next puzzle across 5 progressive campaign packs.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="worlds">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">364 Curated Levels</div>
+          <h2 class="section-title">5 Packs Across 4 Cozy Rooms</h2>
+          <p class="section-subtitle">The first level of every pack is unlocked right away so beginners and veterans alike can jump straight to their sweet spot.</p>
+        </div>
+        <div class="packs-grid">
+          <article class="pack-card">
+            <span class="pack-world">Living room</span>
+            <h3>Warm-up</h3>
+            <div class="pack-range">Levels 1 – 10</div>
+            <p class="pack-blurb">Gentle 5&times;5 boards to learn the basics.</p>
+          </article>
+          <article class="pack-card">
+            <span class="pack-world">Living room</span>
+            <h3>Easy going</h3>
+            <div class="pack-range">Levels 11 – 50</div>
+            <p class="pack-blurb">Relaxed grids where a few tougher ones appear.</p>
+          </article>
+          <article class="pack-card">
+            <span class="pack-world">Attic</span>
+            <h3>Getting tricky</h3>
+            <div class="pack-range">Levels 51 – 120</div>
+            <p class="pack-blurb">6&times;6 medium puzzles take over the floor.</p>
+          </article>
+          <article class="pack-card">
+            <span class="pack-world">Garden</span>
+            <h3>Brain burners</h3>
+            <div class="pack-range">Levels 121 – 240</div>
+            <p class="pack-blurb">7&times;7 hard challenges with clever corridors.</p>
+          </article>
+          <article class="pack-card">
+            <span class="pack-world">Night roof</span>
+            <h3>Masters</h3>
+            <div class="pack-range">Levels 241 – 364</div>
+            <p class="pack-blurb">8&times;8 expert puzzles for seasoned players.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">Designed With Care</div>
+          <h2 class="section-title">Everything a great daily puzzle needs</h2>
+        </div>
+        <div class="card-grid-2">
+          <article class="card">
+            <div class="card-icon">📅</div>
+            <h3>Daily Trace &amp; Practice Mode</h3>
+            <p>Play a fresh weekday-tuned Daily Trace puzzle to build your streak, or generate unlimited custom boards in Practice mode from Gentle 5&times;5 to Expert 8&times;8.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🎵</div>
+            <h3>Soothing Pentatonic Audio &amp; Haptics</h3>
+            <p>Each step plays an ascending pentatonic note with crisp tactile feedback. Toggle sound effects, haptics, or dark mode anytime in Settings.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">💡</div>
+            <h3>Smart, Fair Hints</h3>
+            <p>Stuck on a tricky turn? Use <strong>Next steps</strong> or <strong>Show the route</strong> with daily free hints, streak bonuses, free reset nudges, or optional rewarded ads.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🔒</div>
+            <h3>Respectful &amp; Privacy-First</h3>
+            <p>No account required, no banner clutter, and no forced pop-up ads between levels. Your progress stays safely on your device.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 12px;">
+      <div class="container">
+        <div class="promise-box">
+          <img class="promise-mascot" src="assets/mascot.png" alt="Trace cat yarn mascot" />
+          <div>
+            <h2>Ready to unwind?</h2>
+            <p>Download Trace on Android and start unrolling your first puzzle in seconds—no sign-up, works offline, and built for calm focus.</p>
+          </div>
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.cat.trace" target="_blank" rel="noopener">Get on Google Play</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/app_icon.png" alt="Trace icon" />
+        <div>
+          <strong>Trace</strong>
+          <span>A cozy cat &amp; yarn path puzzle</span>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="mailto:blixora4@gmail.com">Contact</a>
+      </div>
+      <div class="footer-copy">
+        <span>&copy; 2026 Trace. All rights reserved.</span>
+        <span>Package ID: com.cat.trace</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const SIZE = 4;
+      const BLOCKED = new Set(["1,2", "2,2"]);
+      const START = "0,0";
+      const TOTAL_OPEN = SIZE * SIZE - BLOCKED.size;
+
+      const boardEl = document.getElementById("mini-board");
+      const svgPathEl = document.getElementById("mini-yarn-path");
+      const statusEl = document.getElementById("mini-status");
+      const resetBtn = document.getElementById("mini-reset");
+
+      let path = [START];
+      let dragging = false;
+
+      function keyOf(r, c) { return r + "," + c; }
+      function parseKey(k) { return k.split(",").map(Number); }
+      function isAdjacent(a, b) {
+        const [r1, c1] = parseKey(a);
+        const [r2, c2] = parseKey(b);
+        return Math.abs(r1 - r2) + Math.abs(c1 - c2) === 1;
+      }
+
+      function stepTo(key) {
+        if (BLOCKED.has(key)) return;
+        const idx = path.indexOf(key);
+        if (idx !== -1) {
+          if (idx === path.length - 2) {
+            path.pop();
+            render();
+          }
+          return;
+        }
+        const head = path[path.length - 1];
+        if (isAdjacent(head, key)) {
+          path.push(key);
+          render();
+        }
+      }
+
+      function cellCenter(key) {
+        const [r, c] = parseKey(key);
+        const step = 220 / SIZE;
+        return [c * step + step / 2, r * step + step / 2];
+      }
+
+      function render() {
+        boardEl.innerHTML = "";
+        const head = path[path.length - 1];
+        const visitedSet = new Set(path);
+
+        for (let r = 0; r < SIZE; r++) {
+          for (let c = 0; c < SIZE; c++) {
+            const k = keyOf(r, c);
+            const cell = document.createElement("div");
+            cell.className = "mini-cell";
+            cell.dataset.key = k;
+            if (BLOCKED.has(k)) {
+              cell.classList.add("blocked");
+              cell.textContent = "🛋️";
+            } else if (k === head) {
+              cell.classList.add("head");
+              cell.textContent = "🐱";
+            } else if (visitedSet.has(k)) {
+              cell.classList.add("visited");
+            }
+            cell.addEventListener("pointerdown", function (e) {
+              e.preventDefault();
+              dragging = true;
+              stepTo(k);
+            });
+            cell.addEventListener("pointerenter", function () {
+              if (dragging) stepTo(k);
+            });
+            boardEl.appendChild(cell);
+          }
+        }
+
+        const pts = path.map(cellCenter);
+        if (pts.length > 1) {
+          svgPathEl.setAttribute(
+            "d",
+            pts.map((p, i) => (i === 0 ? "M " : "L ") + p[0].toFixed(1) + " " + p[1].toFixed(1)).join(" ")
+          );
+        } else {
+          svgPathEl.setAttribute("d", "");
+        }
+
+        const left = TOTAL_OPEN - path.length;
+        if (left === 0) {
+          statusEl.textContent = "Purr-fect! ⭐⭐⭐ Puzzle solved!";
+        } else {
+          statusEl.textContent = left + (left === 1 ? " tile left" : " tiles left");
+        }
+      }
+
+      window.addEventListener("pointerup", function () { dragging = false; });
+      boardEl.addEventListener("pointermove", function (e) {
+        if (!dragging) return;
+        const el = document.elementFromPoint(e.clientX, e.clientY);
+        if (el && el.dataset && el.dataset.key) stepTo(el.dataset.key);
+      });
+
+      resetBtn.addEventListener("click", function () {
+        path = [START];
+        render();
+      });
+
+      render();
+    })();
+  </script>
+</body>
+</html>
